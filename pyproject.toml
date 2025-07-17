@@ -4,10 +4,13 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "example_package_saileesawant"
-version = "0.1.0"
+dynamic = ["version"]
 dependencies = ["numpy"]
 
  # In pyproject.toml
  
 [project.optional-dependencies]
 test = ["pytest"]
+
+[tool.hatch]
+version.path = "src/example_package_saileesawant/__init__.py"
